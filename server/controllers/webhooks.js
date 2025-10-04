@@ -31,11 +31,11 @@ export const clerWebhooks = async (req, res) => {
 
             case 'user.updated': {
                 const updatedData = {
-                    email: data.email_addresses[0]?.email_addresses,
+                    email: data.email_addresses[0]?.email,
                     name: data.first_name + " " + data.last_name,
                     image: data.image_url
                 };
-                await User.findByIdAndUpdate(data.id, userData);
+                await User.findByIdAndUpdate(data.id, updatedData);
                 res.json({})
                 break;
             }

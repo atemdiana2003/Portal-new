@@ -12,6 +12,7 @@ const Home = () => {
         <Navbar />
         <Hero />
         <JobListing />
+        <JobCard />
         <AppDownload />
         <Footer />
     </div>
